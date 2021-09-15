@@ -11,6 +11,8 @@ module.exports = {
         const responder = new MessageEmbed()
         .setColor('RANDOM')
         .setAuthor(`${Target.tag}\'s Avatar`)
+        .setTitle('Link As')
+        .setDescription(`[png](${Target.displayAvatarURL({ format: 'png', dynamic: true, size: 1024 })})`)
         .setImage(Target.displayAvatarURL({ dynamic: true, size: 1024 }))
         .setFooter(`Requerido Por ${message.author.tag}`, message.author.displayAvatarURL({ dynamic: true}))
 
