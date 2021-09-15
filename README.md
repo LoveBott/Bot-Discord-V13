@@ -1,4 +1,4 @@
-<p align="center">Bot Discord V13 :heart: </p>
+<p src="xd" align="center">Bot Discord V13 :heart:</p>
 
 # 🌐 Descargar Las Cosas Necesarias
 
