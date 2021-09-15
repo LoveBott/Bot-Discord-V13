@@ -118,4 +118,4 @@ client.on("messageCreate", async message => {
 
 <div align="left"><img src="https://github.com/Lovebott/Bot-Discord-V13/blob/main/assets/token-bot-tutoriales.gif?raw=true">
 
-Mas Informacion: [Click Aqui](https://github.com/Lovebott/Bot-Discord-V13#-ejecuta-los-proyectos)
+# Mas Informacion: [Click Aqui](https://github.com/Lovebott/Bot-Discord-V13#-ejecuta-el-proyecto-en)
