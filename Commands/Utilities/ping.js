@@ -9,7 +9,7 @@ module.exports = {
     execute(message, args, commandName, client, Discord) {
         const embed = new MessageEmbed()
         .setColor('LUMINOUS_VIVID_PINK')
-        .setDescription(`Pong: ${client.ws.ping}ms`)
+        .setDescription(`Mi Ping Es: ${client.ws.ping}ms 🏓`)
         message.reply({embeds: [embed]})
     }
 }
