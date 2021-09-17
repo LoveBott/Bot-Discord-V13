@@ -11,7 +11,6 @@ module.exports = {
         if (!message.content.startsWith(prefix) || message.author.bot) return;
 
         const args = message.content.slice(prefix.length).trim().split(/ +/g);
-        //Corte el video ya regreso ya completo esto ya que se va mucho el tiempo :)
         const commandName = args.shift().toLowerCase();
         const command = client.commands.get(commandName) ||
         client.commands.find(cmd => cmd.aliases && cmd.aliases.includes(commandName))
@@ -48,8 +47,8 @@ module.exports = {
                 const timeLeft = (expirationTime - now) / 1000;
                 const timeLeftEmbed = new MessageEmbed()
                 .setColor('RED')
-                .setDescription(`Por Favor Espera Unos ${timeLeft.toFixed(1)} Segundos Para Volver Usar Este Comando  o Slash Command`)
-                return message.channel.send({embeds: [timeLeftEmbed]})
+                .setDescription(`Por Favor Espera Unos ${timeLeft.toFixed(1)} Segundos Para Volver Usar Este Comando | Si Tiene Un Error o sige dando Este Mensaje Consule el server de soporte!`)
+                return message.channel.send({ embeds: [timeLeftEmbed] })
                 .then((sent) => {
                     setTimeout(() => {
                         sent.delete();
@@ -67,8 +66,8 @@ module.exports = {
             console.log(error);
             const ErrorEmbed = new MessageEmbed()
             .setColor('RED')
-            .setDescription(`Se produjo un error al intentar ejecutar este comando, consulte la consola para obtener más detalles`)
-            message.channel.send({embeds: [ErrorEmbed]});
+            .setDescription(`**Se produjo un error al intentar ejecutar este comando, consulte la consola para obtener más detalles**`)
+            message.channel.send({ embeds: [ErrorEmbed] });
         };
-    } //Volvi Bueno esto es x
+    } 
 };
