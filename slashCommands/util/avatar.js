@@ -18,7 +18,6 @@ module.exports = {
    */
     run: async (client, interaction, options) => {
             try {
-              const options = interaction.options._hoistedOptions;
         
         
               const user = interaction.options.getUser("user") || interaction.user;
@@ -30,7 +29,7 @@ module.exports = {
         
         
               embed.setAuthor(member.displayName, user.displayAvatarURL()).setImage(image).setTimestamp();
-              await interacion.followUp({embeds: [embed]})
+              await interaction.followUp({ embeds: [embed] })
             } catch (err) {
               console.log("Algo salió mal =>",err);
             }
