@@ -1,9 +1,8 @@
-const { Client, Interaction, MessageEmbed } = require('discord.js');
+const { Client, CommandInteraction, MessageEmbed } = require('discord.js');
 
 module.exports = {
     name: "avatar",
     description: "obtiene un avatar",
-    type: 'CHAT_INPUT',
     options: [
         {
             name: 'user',
@@ -15,15 +14,15 @@ module.exports = {
     /**
    *
    * @param {Client} client
-   * @param {Interaction} interaction
+   * @param {CommandInteraction} interaction
    */
-    run: async (client, interacion, options) => {
+    run: async (client, interaction, options) => {
             try {
-              const options = interacion.options._hoistedOptions;
+              const options = interaction.options._hoistedOptions;
         
         
-              const user = (options.find((e) => e.name === "user") && options.find((e) => e.name === "user").member.user) || interacion.user;
-              const member = (options.find((e) => e.name === "user") && options.find((e) => e.name === "user").member) || interacion.member;
+              const user = interaction.options.getUser("user") || interaction.user;
+              const member = interaction.options.getMember("member") || interaction.member;
         
               const embed = new MessageEmbed().setColor(member.displayHexColor);
         
