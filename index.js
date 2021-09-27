@@ -6,9 +6,9 @@ const { token } = require('./config.json')
 
 client.commands = new Collection();
 client.cooldowns = new Collection();
-client.slash_commands = new Collection();
+client.slashCommands = new Collection();
 
-['Events', 'Commands', 'slash_commands'].forEach(handler => {
+['Events', 'Commands', 'slashCommands'].forEach(handler => {
     require(`./Handlers/${handler}`)(client, Discord);
 });
 
