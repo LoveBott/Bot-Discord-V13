@@ -6,6 +6,13 @@ module.exports = {
     permissions: '',
     description: "",
     cooldown: 1,
+  /**
+   *
+   * @param {import("../../index")} client
+   * @param {import("discord.js").Message} message
+   * @param {string[]} args
+   * @param {*} param3
+   */
     run: async(message, args, commandName, client, Discord) => {
 
     }
