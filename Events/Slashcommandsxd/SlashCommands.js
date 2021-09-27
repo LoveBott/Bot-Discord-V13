@@ -1,15 +1,33 @@
-const client = require('../../index');
+const client = require("../../index");
 
-client.on('interactionCreate', async (interaction) => {
+client.on("interactionCreate", async (interaction) => {
+    // Slash Command Handler :)
     if (interaction.isCommand()) {
-        let cmd = client.slash_commands.get(interaction.commandName);
-        if (!cmd) return interaction.followUp({
-            content: 'este comando Slash no existe Consulte al server de soporte si sale de nuevo este mensaje!'
-        }) && client.slash_commands.delete(interaction.commandName)
+        await interaction.deferReply({ ephemeral: false }).catch(() => {});
 
-        await interaction.deferReply().catch(e => { });
-        let options = interaction.options._hoistedOptions;
+        const cmd = client.slashCommands.get(interaction.commandName);
+        if (!cmd)
+            return interaction.followUp({ content: "Ocurrio Un Error :c" });
 
-        cmd.run(client, interaction, options)
+        const args = [];
+
+        for (let option of interaction.options.data) {
+            if (option.type === "SUB_COMMAND") {
+                if (option.name) args.push(option.name);
+                option.options?.forEach((x) => {
+                    if (x.value) args.push(x.value);
+                });
+            } else if (option.value) args.push(option.value);
+        }
+        interaction.member = interaction.guild.members.cache.get(interaction.user.id);
+
+        cmd.run(client, interaction, args);
     }
-})
+
+    // Context Menu Handler
+    if (interaction.isContextMenu()) {
+        await interaction.deferReply({ ephemeral: true });
+        const command = client.slashCommands.get(interaction.commandName);
+        if (command) command.run(client, interaction, args);
+    }
+});
