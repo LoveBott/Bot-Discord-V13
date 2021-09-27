@@ -12,7 +12,7 @@ module.exports = {
    * @param {string[]} args
    * @param {*} param3
    */
-  execute(message, args, commandName, client, Discord) {
+  run: async(message, args, commandName, client, Discord) => {
     const Target = message.mentions.users.first() || message.author;
 
     const responder = new MessageEmbed().setColor("RANDOM");
