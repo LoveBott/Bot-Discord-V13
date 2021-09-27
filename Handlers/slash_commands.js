@@ -1,53 +1,35 @@
-const chalk = require('chalk');
-const fs = require('fs')
-const {
-    commands
-} = require('../index');
-const {
-    readdirSync
-} = fs;
-const client = require('../index')
+const { glob } = require("glob");
+const { promisify } = require("util");
+const { Client } = require("discord.js");
 
-module.exports = (client, Discord) => {
-    
-module.exports = (client, Discord)
-console.log(chalk.blue.bold('Comandos Slash :D'))
-readdirSync('./slashCommands').forEach(async (dir) => {
-    const commands = readdirSync(`./slashCommands/${dir}`).filter((file) => 
-    file.endsWith('.js')
-    )
+const globPromise = promisify(glob);
 
+/**
+ * @param {Client} client
+ */
+module.exports = async (client) => {
 
+    // Slash Commands
+    const slashCommands = await globPromise(
+        `${process.cwd()}/SlashCommands/*/*.js`
+    );
 
-        commands.map(async cmd => {
-            let file = require(`../slashCommands/${dir}/${cmd}`);
+    const arrayOfSlashCommands = [];
+    slashCommands.map((value) => {
+        const file = require(value);
+        if (!file?.name) return;
+        client.slashCommands.set(file.name, file);
 
-            let name = file.name || "No Hay nombre de comando";
-            let description = file.description || "No hay description";
-            let options = file.options || [];
+        if (["MESSAGE", "USER"].includes(file.type)) delete file.description;
+        arrayOfSlashCommands.push(file);
+    });
+    client.on("ready", async () => {
+        // Registrarse los slash para un solo server
+        await client.guilds.cache
+            .get("ID GUILD")
+            .commands.set(arrayOfSlashCommands);
 
-            const data = {
-                name,
-                description,
-                options
-            }
-
-            let option = name == "Hay un nombre en el slash" ? '❌' : '✅';
-
-            console.log(`Slash Command Cargado: ${option} | ${name}`);
-
-            if (option == '✅') {
-                setTimeout(async () => {
-                    client.slash_commands.set(name, {
-                        ...data,
-                        run: file.run
-                    });
-
-                    await client.guilds.cache.get('ID GUILD').commands.create(data)
-                }, 2500);
-
-                
-            }
-        })
-})
-}
+        // Register los slash para todos los servers en los que está el bot :)
+        // await client.application.commands.set(arrayOfSlashCommands);
+    });
+};
