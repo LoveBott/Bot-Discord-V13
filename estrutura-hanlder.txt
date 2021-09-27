@@ -5,8 +5,8 @@ module.exports = {
     aliases: [''],
     permissions: '',
     description: "",
-    cooldown: ,
-    async execute(message, args, commandName, client, Discord) {
+    cooldown: 1,
+    run: async(message, args, commandName, client, Discord) => {
 
     }
 }
