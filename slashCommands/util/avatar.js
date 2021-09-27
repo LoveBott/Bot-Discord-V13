@@ -10,7 +10,6 @@ const {
 module.exports = {
   name: "avatar",
   description: "obtiene un avatar",
-  type: "CHAT_INPUT",
   options: [
     {
       name: "user",
