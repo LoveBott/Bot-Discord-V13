@@ -1,4 +1,4 @@
-const { MessageEmbed, Interaction, CommandInteraction } = require("discord.js");
+const { MessageEmbed, Client, CommandInteraction } = require("discord.js");
 
 module.exports = {
   name: "setnick",
@@ -51,7 +51,7 @@ module.exports = {
         .setFooter(`De ${oldNick} a ${nickname}`);
       await interaction.followUp({ embeds: [embed] });
     } catch (err) {
-      console.log("Algo salió mal =>", err);
+      console.log("Algo salió mal En La Consola =>", err);
     }
   },
 };
