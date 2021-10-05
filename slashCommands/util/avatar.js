@@ -1,7 +1,7 @@
 const {
   Client,
   MessageEmbed,
-  Message,
+  Client,
   MessageActionRow,
   MessageButton,
   CommandInteraction,
