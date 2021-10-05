@@ -67,3 +67,4 @@ module.exports = {
     message.reply({ embeds: [responder], components: [row] });
     },
 };
+
