@@ -13,7 +13,7 @@ module.exports = {
   // * @param {String[]} args
   // */
   run: async (client, message, args) => {
-    
+ 
     const embed = new MessageEmbed()
       .setColor("RANDOM")
       .setDescription(`Mi Ping Es: ${client.ws.ping}ms 🏓`);
