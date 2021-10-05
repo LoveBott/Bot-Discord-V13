@@ -3,5 +3,5 @@
   "prefix": "Tu Prefix",
   "ownerTag": "Owner Tag",
   "MongooseURL": "Mongoose Server URL",
-  "ownersIDS": ["OwnerID1", "OwnerID2", "OwnerID3"]
+  "OwnersIDS": ["OwnerID1", "OwnerID2", "OwnerID3"]
 }
