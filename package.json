@@ -34,7 +34,8 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node ."
+    "start": "npm install && npm install node@16.10.0 && npm run start2",
+    "start2": "node ."
   },
   "keywords": [],
   "author": "",
