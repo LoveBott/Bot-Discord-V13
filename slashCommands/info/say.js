@@ -2,7 +2,7 @@ const {
   MessageButton,
   MessageActionRow,
   MessageEmbed,
-  Interaction,
+  Client,
   CommandInteraction,
 } = require("discord.js");
 
