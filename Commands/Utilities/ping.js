@@ -17,7 +17,7 @@ module.exports = {
     const embed = new MessageEmbed()
       .setColor("RANDOM")
       .setDescription(`Mi Ping Es: ${client.ws.ping}ms 🏓`);
-    message.reply({ embeds: [embed] });
+     message.reply({ embeds: [embed] });
     
   },
 };
