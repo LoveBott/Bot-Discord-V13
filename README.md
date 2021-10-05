@@ -164,11 +164,11 @@ node . o dale click en "start.bat"
 # **💨 Ejecuta El Proyecto En**
 
 ### **Glitch:** 
-[![Remix en Glitch](https://cdn.glitch.com/2703baf2-b643-4da7-ab91-7ee2a2d00b5b%2Fremix-button.svg)](https://glitch.com/edit/#!/import/github/AahhsSjsj/Bot-Tutoriales-V13)
+[![Remix en Glitch](https://cdn.glitch.com/2703baf2-b643-4da7-ab91-7ee2a2d00b5b%2Fremix-button.svg)](https://glitch.com/edit/#!/import/github/LoveBott/Bot-Discord-V13)
 ### **Repl:** 
-[![Ejecutarse en Repl.it](/assets/GitHub.PNG)](https://repl.it/github/AahhsSjsj/Bot-Tutoriales-V13)
+[![Ejecutarse en Repl.it](/assets/GitHub.PNG)](https://repl.it/github/LoveBott/Bot-Discord-V13)
 ### **Heroku:** 
-[![Desplegar](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/AahhsSjsj/Bot-Tutoriales-V13)
+[![Desplegar](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/LoveBott/Bot-Discord-V13)
 
 # **🔗Links**
 
