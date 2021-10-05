@@ -22,7 +22,7 @@ module.exports = async (client) => {
         return Table.addRow(file.split("/")[7], "🔸 FAILED", "Falta un nombre")
 
         if(!command.description) 
-        return Table.addRow(command.name, "🔸 FAILED", "Falta una Descripcion")
+        return Table.addRow(command.name, "🔸 FAILED", "Falta una Description")
 
         if(command.permission) {
             if(Perms.includes(command.permission))
@@ -40,7 +40,7 @@ module.exports = async (client) => {
     console.log(Table.toString())
 
     client.on("ready", async () => {
-        const MailGuild = await client.guilds.cache.get('890703786358759506') //Muy Pronto Si Tiene Apoyo Pongo hacerlo lo mismo pero global osea "await client.application.commands.set(CommandsArray)"
+        const MailGuild = await client.guilds.cache.get('GUILD ID') //Muy Pronto Si Tiene Apoyo Pongo hacerlo lo mismo pero global osea "await client.application.commands.set(CommandsArray)"
 
         MailGuild.commands.set(CommandsArray).then(async (command) => {
             const Roles = (commandName) => {
