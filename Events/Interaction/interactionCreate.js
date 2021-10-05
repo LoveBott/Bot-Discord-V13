@@ -1,13 +1,21 @@
-const client = require("../../index");
+  
+const { Client, CommandInteraction, MessageEmbed } = require('discord.js')
 
-client.on("interactionCreate", async (interaction) => {
-    // Slash Command Handler :)
+module.exports = {
+    name: "interactionCreate",
+    /**
+     *
+     * @param {CommandInteraction} interaction
+     * @param {Client} client
+     */
+    run: async(interaction, client) => {
+    // Handler Slash Commands
     if (interaction.isCommand()) {
         await interaction.deferReply({ ephemeral: false }).catch(() => {});
 
-        const cmd = client.slashCommands.get(interaction.commandName);
+        const cmd = client.Slashcommands.get(interaction.commandName);
         if (!cmd)
-            return interaction.followUp({ content: "Ocurrio Un Error :c" });
+            return interaction.followUp({ content: "Ups Ocurrio Un Error" });
 
         const args = [];
 
@@ -21,13 +29,14 @@ client.on("interactionCreate", async (interaction) => {
         }
         interaction.member = interaction.guild.members.cache.get(interaction.user.id);
 
-        cmd.run(client, interaction, args);
+        cmd.run(interaction, client, args);
     }
 
-    // Context Menu Handler
+    // Handler Context Menu xD
     if (interaction.isContextMenu()) {
         await interaction.deferReply({ ephemeral: true });
-        const command = client.slashCommands.get(interaction.commandName);
-        if (command) command.run(client, interaction, args);
+        const command = client.Slashcommands.get(interaction.commandName);
+        if (command) command.run(interaction, client, args);
     }
-});
+    }
+}

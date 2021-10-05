@@ -10,6 +10,7 @@ const {
 module.exports = {
   name: "avatar",
   description: "obtiene un avatar",
+  //permission: "SEND_MESSAGES"
   options: [
     {
       name: "user",
@@ -24,12 +25,12 @@ module.exports = {
    * @param {CommandInteraction} interaction
    * @param {String[]} args
    */
-   run: async (client, interaction, args) => {
+  run: async (interaction, client, args) => {
     try {
-
       const user = interaction.options.getUser("user") || interaction.user;
 
-      const member =  interaction.options.getMember("user") || interaction.member;
+      const member =
+        interaction.options.getMember("user") || interaction.member;
 
       const embed = new MessageEmbed().setColor("RANDOM");
 
@@ -82,8 +83,11 @@ module.exports = {
 
       await interaction.followUp({ embeds: [embed], components: [row] });
     } catch (err) {
-      let embed2 = new MessageEmbed().setAuthor('❌ Algo Salio Mal').setTitle('Mensaje Del Error =>').setDescription(`**\`\`\`${err}\`\`\`**`)
-      return interaction.followUp({ embeds: [embed2] })
+      let embed2 = new MessageEmbed()
+        .setAuthor("❌ Algo Salio Mal")
+        .setTitle("Mensaje Del Error =>")
+        .setDescription(`**\`\`\`${err}\`\`\`**`);
+      return interaction.followUp({ embeds: [embed2] });
     }
   },
 }; //Bueno todo es mio pero se bugeo github asi que n.n

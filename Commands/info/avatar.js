@@ -9,10 +9,9 @@ module.exports = {
    *
    * @param {import("../../index")} client
    * @param {import("discord.js").Message} message
-   * @param {string[]} args
-   * @param {*} param3
+   * @param {String[]} args
    */
-  run: async(message, args, commandName, client, Discord) => {
+  run: async(client, message, args) => {
     const Target = message.mentions.users.first() || message.author;
 
     const responder = new MessageEmbed().setColor("RANDOM");
