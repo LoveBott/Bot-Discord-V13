@@ -9,7 +9,8 @@ const {
 module.exports = {
   name: "avatar",
   aliases: ["pfp"],
-  description: "Muestra El Avatar Del Usuario",
+  description: "Muestra Tu Avatar O Del Mencionado",
+  permissions: "SEND_MESSAGES",
   cooldown: 5,
   /**
    *

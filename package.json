@@ -34,7 +34,6 @@
     "ws": "^7.5.3"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "nodev16": "npm install node@16.10.0 && npm install",
     "start": "node ."
   },

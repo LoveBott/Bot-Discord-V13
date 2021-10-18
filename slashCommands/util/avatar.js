@@ -9,7 +9,7 @@ const {
 module.exports = {
   name: "avatar",
   description: "obtiene un avatar",
-  //permission: "SEND_MESSAGES"
+  //permission: "SEND_MESSAGES",
   options: [
     {
       name: "user",

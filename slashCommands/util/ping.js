@@ -3,7 +3,7 @@ const { Client, CommandInteraction, MessageEmbed } = require("discord.js");
 module.exports = {
   name: "ping",
   description: "mira el ping del bot",
-  //permission: "SEND_MESSAGES"
+  //permission: "SEND_MESSAGES",
   /**
    *
    * @param {CommandInteraction} interaction

@@ -12,7 +12,7 @@ module.exports = {
       required: true,
     },
     {
-      name: "setapodo",
+      name: "apodo",
       description: "Pon un texto para cambiarle el apodo al user",
       type: 3,
       required: true,
@@ -26,7 +26,7 @@ module.exports = {
   run: async (interaction, client) => {
     try {
       const user = interaction.options.getUser("usuario");
-      const nickname = interaction.options.getString("setapodo");
+      const nickname = interaction.options.getString("apodo");
 
       const embed = new MessageEmbed().setColor("RANDOM");
 

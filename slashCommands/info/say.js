@@ -3,8 +3,7 @@ const { Client, CommandInteraction } = require("discord.js");
 module.exports = {
   name: "say",
   description: "say",
-  type: "CHAT_INPUT",
-  //permission: "SEND_MESSAGES"
+  //permission: "SEND_MESSAGES",
   options: [
     {
       name: "texto",

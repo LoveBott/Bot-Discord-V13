@@ -196,7 +196,7 @@ npm start
 **O Darle Al Button "Run"**
 <div align="center"><img src="https://cdn.discordapp.com/attachments/896246415871864832/899724256773021756/smbbPzaX65.mp4">
 
-**Eso Y Ya Estaria Tu Bot De Discord Disfruta <3**
+**Eso Y Ya Estaria Tu Bot De Discord Disfruta Tu Bot <3!**
 
 # **💨 Ejecuta El Proyecto En**
 
