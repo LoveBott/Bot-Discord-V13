@@ -1,4 +1,10 @@
-const { MessageEmbed, MessageActionRow, MessageButton } = require("discord.js");
+const {
+  Client,
+  Message,
+  MessageEmbed,
+  MessageActionRow,
+  MessageButton,
+} = require("discord.js");
 
 module.exports = {
   name: "avatar",
@@ -7,18 +13,17 @@ module.exports = {
   cooldown: 5,
   /**
    *
-   * @param {import("../../index")} client
-   * @param {import("discord.js").Message} message
+   * @param {Client} client
+   * @param {Message} message
    * @param {String[]} args
    */
-  run: async(client, message, args) => {
+  run: async (client, message, args) => {
     const Target = message.mentions.users.first() || message.author;
 
     const responder = new MessageEmbed().setColor("RANDOM");
 
     const image = Target.displayAvatarURL({ dynamic: true, size: 1024 });
-  
-    
+
     const png = Target.displayAvatarURL({
       dynamic: true,
       format: "png",
@@ -63,8 +68,6 @@ module.exports = {
       new MessageButton().setStyle("LINK").setLabel("GIF").setURL(`${gif}`)
     );
 
-
     message.reply({ embeds: [responder], components: [row] });
-    },
+  },
 };
-

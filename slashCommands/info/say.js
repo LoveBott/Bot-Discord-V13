@@ -1,10 +1,4 @@
-const {
-  MessageButton,
-  MessageActionRow,
-  MessageEmbed,
-  Client,
-  CommandInteraction,
-} = require("discord.js");
+const { Client, CommandInteraction } = require("discord.js");
 
 module.exports = {
   name: "say",
@@ -23,9 +17,8 @@ module.exports = {
    *
    * @param {Client} client
    * @param {CommandInteraction} interaction
-   * @param {String[]} args
    */
-  run: async (interaction, client, args) => {
+  run: async (interaction, client) => {
     try {
       await interaction.deferReply().catch((err) => {});
 

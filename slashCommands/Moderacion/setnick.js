@@ -22,9 +22,8 @@ module.exports = {
    *
    * @param {Client} client
    * @param {CommandInteraction} interaction
-   * @param {String[]} args
    */
-  run: async (interaction, client, args) => {
+  run: async (interaction, client) => {
     try {
       const user = interaction.options.getUser("usuario");
       const nickname = interaction.options.getString("setapodo");
