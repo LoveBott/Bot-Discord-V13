@@ -38,7 +38,7 @@ PD: Muy Pronto Video De Esto OwO
 * [Node.js 16.8.0](https://nodejs.org/en/download/current/)
 * [discord.js@13.1.0](https://www.npmjs.com/package/discord.js/v/13.1.0)
 
-**O Darle Click Aqui [Here](https://github.com/AahhsSjsj/Bot-Tutoriales-V13#-descargar-las-cosas-necesarias) Para llevarte A Descargar Mas Rapido Node.Js o tambien visual studio code o si no puedes editar en Replit - Glitch - Heroku PD: Heroku es un host lo puedes editar tu proyecto con Visual Studio Code para eso necesita Git - Heroku App - Node.JS Y Para Descargar Esto Tres Dale Click Aqui [Here](https://github.com/AahhsSjsj/Bot-Tutoriales-V13#-descargar-las-cosas-necesarias)**
+**O Darle Click Aqui [Here](https://github.com/LoveBott/Discord-Bot-V13#-descargar-las-cosas-necesarias) Para llevarte A Descargar Mas Rapido Node.Js o tambien visual studio code o si no puedes editar en Replit - Glitch - Heroku PD: Heroku es un host lo puedes editar tu proyecto con Visual Studio Code para eso necesita Git - Heroku App - Node.JS Y Para Descargar Esto Tres Dale Click Aqui [Here](https://github.com/LoveBott/Discord-Bot-V13#-descargar-las-cosas-necesarias)**
 # Instalación
 
 **Se requiere Node.JS v16.8.0 o más reciente**
@@ -105,7 +105,7 @@ npm install o Dandole Click a "install-packages.bat"
 
 # Ejemplos
 
-**npm install discord.js Package Aqui: [**Click Aqui**](https://github.com/AahhsSjsj/Bot-Tutoriales-V13#package)- lo definimos abajo esta para hacer el bot 😅**
+**npm install discord.js Package Aqui: [**Click Aqui**](https://github.com/LoveBott/Discord-Bot-V13#package)- lo definimos abajo esta para hacer el bot 😅**
 
 # DISCORD.JS
 
@@ -216,7 +216,8 @@ npm start
 * [Discord Server](https://discord.gg/TvBXwYbW4y)
 * [Node.js v16](https://nodejs.org/es/download/current/)
 * [Visual Studio Code](https://code.visualstudio.com/download)
-* [Repositorio Bot-Tutoriales-V13 V12](https://github.con/AahhsSjsj/Bot-Tutoriales-V13)
+* [Repositorio Bot-Tutoriales-V12](https://github.con/AahhsSjsj/Bot-Tutoriales-V12)
+* [Repositorio Bot-Tutoriales-V13](https://github.con/AahhsSjsj/Bot-Tutoriales-V13)
 * [Mi Server De Discord](https://dsc.gg/ts-community)
 
 ### **🔗 Links De La Paginas Para Ejecutar El Proyecto**
