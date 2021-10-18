@@ -163,21 +163,21 @@ client.on("messageCreate", async message => {
 
 ### **Primer Paso Irte A Tu Proyecto Y Anda A Secrets:**
 
-<div align="center"><img src="https://i.imgur.com/Cfd6e8w.png">
+<img src="/assets/Cfd6e8w.png" align="center">
 
 ### **Segundo Paso Creas Un Nuevo Secret**
 **Primero Debes Irte Al Developer Portal , En Bot y Copias Tu Token Link: [Click Aqui](https://discord.com/developers/applications/clientID/bot)**
-<div align="center"><img src="https://cdn.discordapp.com/attachments/893224608738717775/899718871781621840/bbZjOd3UmW.mp4">
+<img src="/assets/bbZjOd3UmW.gif" align="center">
 
 **Ya Despues Debes Irte A Tu Proyecto De Replit Y Crear TU Nuevo Secret!**
-<div align="center"><img src="https://cdn.discordapp.com/attachments/893224608738717775/899719550101233754/hEdEKhVCly.mp4">
+<img src="/assets/hEdEKhVCly.gif" align="center">
 
 ### **Ultimo Paso Definir Tu Token Con Este Proyecto!**
 **Debes Irte A Tu index.js o app.js ect y poner esto:**
 ```js
 const token  = process.env['mySecret']
 ```
-<div align="center"><img src="https://cdn.discordapp.com/attachments/896246415871864832/899721025380573275/KICrBhByNh.mp4">
+<img src="/assets/KICrBhByNh.gif" align="center">
 
 ### **Ya Estaria!**
 
@@ -194,7 +194,7 @@ npm run nodev16
 npm start
 ```
 **O Darle Al Button "Run"**
-<div align="center"><img src="https://cdn.discordapp.com/attachments/896246415871864832/899724256773021756/smbbPzaX65.mp4">
+<img src="/assets/smbbPzaX65.gif" align="center">
 
 **Eso Y Ya Estaria Tu Bot De Discord Disfruta Tu Bot <3!**
 
