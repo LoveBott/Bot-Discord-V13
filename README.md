@@ -112,7 +112,8 @@ npm install o Dandole Click a "install-packages.bat"
 ```javascript
 const Discord = require('discord.js')
 const client = new Client({intents: 1}) //Si quieres poner otros intents es aqui: https://ziad87.net/intents/
-const { token, prefix } = require('./config.json')
+const { token, prefix } = require('./config.json') //En Replit Debes Crear Un Secret y definilo asi: const token = process.env['token'] y para el prefix: const prefix = "tu prefix"
+//mas Informacion: https://github.com/Lovebott/Bot-Discord-V13#env-en-replit
 
 function presence(){
    client.user.setPresence({
@@ -126,19 +127,52 @@ function presence(){
    });
 }
 
+//    const array = [
+//      {
+//        name: "Status Text 1",
+//        type: "PLAYING",
+//      },
+//      {
+//        name: "Status Text 2",
+//        type: "WATCHING",
+//      },
+//      {
+//        name: "Status Text 3",
+//        type: "LISTENING",
+//      },
+//      {
+//        name: "Status Text 4",
+//        type: "COMPETING",
+//      },
+//      {
+//        name: "Status Text 5",
+//        type: "STREAMING",
+//        url: "url de twitch!",
+//      },
+//    ];
+
+//setInterval(() => {
+//  function presence() {
+//    client.user.setPresence({
+//      status: "online",//dnd, idle, invisible, online
+//      activities: [array[Math.floor(Math.random() * array.length)]],
+//    });
+//  }
+//}, 1000)
+
 
 client.on("ready", () => {
     console.log("Estoy listo!");
-    prensece();
+    presence();
  });
  
 client.on("messageCreate", async message => {
     if(message.author.bot) return;
     if(message.content.indexOf(prefix) !==0) return;
 
-    const agrs = message.content.slice(prefix.length).trim().split(/ +/g);
+    const args = message.content.slice(prefix.length).trim().split(/ +/g);
 
-    const command = agrs.shift().toLowerCase();
+    const command = args.shift().toLowerCase();
 
     if(command === 'ping') {
 
@@ -213,12 +247,10 @@ npm start
 * [Documentation Discord.js](https://discord.js.org/#/docs/main/stable/general/welcome)
 * [Discord.js Server](https://discord.com/invite/bRCvFy9)
 * [Github](https://github.com/AahhsSjsj)
-* [Discord Server](https://discord.gg/TvBXwYbW4y)
 * [Node.js v16](https://nodejs.org/es/download/current/)
 * [Visual Studio Code](https://code.visualstudio.com/download)
 * [Repositorio Bot-Tutoriales-V12](https://github.con/AahhsSjsj/Bot-Tutoriales-V12)
 * [Repositorio Bot-Tutoriales-V13](https://github.con/AahhsSjsj/Bot-Tutoriales-V13)
-* [Mi Server De Discord](https://dsc.gg/ts-community)
 
 ### **🔗 Links De La Paginas Para Ejecutar El Proyecto**
 
