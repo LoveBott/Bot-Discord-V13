@@ -74,7 +74,7 @@ npm install
 const Discord = require('discord.js')
 const client = new Client({intents: 1}) //Si quieres poner otros intents es aqui: https://ziad87.net/intents/
 const { token, prefix } = require('./config.json') //En Replit Debes Crear Un Secret y definilo asi: const token = process.env['token'] y para el prefix: const prefix = "tu prefix"
-//mas Informacion: https://github.com/AahhsSjsj/Bot-Tutoriales-V13#env-en-replit
+//mas Informacion: https://github.com/Lovebott/Bot-Discord-V13#env-en-replit
 
 function presence(){
    client.user.setPresence({
