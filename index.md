@@ -66,7 +66,7 @@ npm install
 
 #### Ejemplos
 
-**npm install discord.js Package Aqui: [**Click Aqui**](https://github.com/Jennifer7w7/Bot-Tutoriales-V13#package)- lo definimos abajo esta para hacer el bot 😅**
+**npm install discord.js Package Aqui: [Click Aqui](https://github.com/Lovebott/Bot-Discord-V13#package)- lo definimos abajo esta para hacer el bot 😅**
 
 # DISCORD.JS
 
@@ -110,7 +110,7 @@ client.on("messageCreate", async message => {
  
 
  
- client.login(token);
+ client.login(token); //No Hacer C&P(Copy and Paste) por que esto puede tener errores ❌
 
 ```
 
@@ -118,4 +118,4 @@ client.on("messageCreate", async message => {
 
 <div align="left"><img src="https://github.com/Lovebott/Bot-Discord-V13/blob/main/assets/token-bot-tutoriales.gif?raw=true">
 
-# Mas Informacion: [Click Aqui](https://github.com/Lovebott/Bot-Discord-V13#-ejecuta-el-proyecto-en)
+**Mas Informacion: [Click Aqui](https://github.com/Lovebott/Bot-Discord-V13#-ejecuta-el-proyecto-en)**
