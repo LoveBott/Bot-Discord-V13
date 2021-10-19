@@ -131,9 +131,9 @@ client.on("messageCreate", async message => {
     if(message.author.bot) return;
     if(message.content.indexOf(prefix) !==0) return;
 
-    const agrs = message.content.slice(prefix.length).trim().split(/ +/g);
+    const args = message.content.slice(prefix.length).trim().split(/ +/g);
 
-    const command = agrs.shift().toLowerCase();
+    const command = args.shift().toLowerCase();
 
     if(command === 'ping') {
 
