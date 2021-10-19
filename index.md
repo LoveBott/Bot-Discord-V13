@@ -73,7 +73,8 @@ npm install
 ```javascript
 const Discord = require('discord.js')
 const client = new Client({intents: 1}) //Si quieres poner otros intents es aqui: https://ziad87.net/intents/
-const { token, prefix } = require('./config.json')
+const { token, prefix } = require('./config.json') //En Replit Debes Crear Un Secret y definilo asi: const token = process.env['token'] y para el prefix: const prefix = "tu prefix"
+//mas Informacion: https://github.com/AahhsSjsj/Bot-Tutoriales-V13#env-en-replit
 
 function presence(){
    client.user.setPresence({
@@ -87,10 +88,43 @@ function presence(){
    });
 }
 
+//    const array = [
+//      {
+//        name: "Status Text 1",
+//        type: "PLAYING",
+//      },
+//      {
+//        name: "Status Text 2",
+//        type: "WATCHING",
+//      },
+//      {
+//        name: "Status Text 3",
+//        type: "LISTENING",
+//      },
+//      {
+//        name: "Status Text 4",
+//        type: "COMPETING",
+//      },
+//      {
+//        name: "Status Text 5",
+//        type: "STREAMING",
+//        url: "url de twitch!",
+//      },
+//    ];
+
+//setInterval(() => {
+//  function presence() {
+//    client.user.setPresence({
+//      status: "online",//dnd, idle, invisible, online
+//      activities: [array[Math.floor(Math.random() * array.length)]],
+//    });
+//  }
+//}, 1000)
+
 
 client.on("ready", () => {
     console.log("Estoy listo!");
-    prensece();
+    presence();
  });
  
 client.on("messageCreate", async message => {
@@ -118,4 +152,4 @@ client.on("messageCreate", async message => {
 
 <div align="left"><img src="https://github.com/Lovebott/Bot-Discord-V13/blob/main/assets/token-bot-tutoriales.gif?raw=true">
 
-**Mas Informacion: [Click Aqui](https://github.com/Lovebott/Bot-Discord-V13#-ejecuta-el-proyecto-en)**
+Mas Informacion: [Click Aqui](https://github.com/Lovebott/Bot-Discord-V13#-ejecuta-el-proyecto-en)
