@@ -1,4 +1,4 @@
-## PD: El User "Jennifer7w7" Soy Yo Osea: "AahhsSjsj" :)
+# **PD: El User "Jennifer7w7" Soy Yo Osea: "AahhsSjsj" :)**
 
 <p src="xd" align="center">Bot Discord V13 :heart:</p>
 
