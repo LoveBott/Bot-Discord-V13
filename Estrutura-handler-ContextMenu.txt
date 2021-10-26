@@ -1,0 +1,13 @@
+const { Client, ContextMenuInteraction } = require("discord.js");
+
+module.exports = {
+  name: "",
+  type: "", //TYPES: USER Y MESSAGE
+  permission: "", //Lee El Archivo Validation/Permissions.js Or C:\Users\TUUSER\Bot-Discord-V13\Validation\Permissions.js>
+  /**
+   *
+   * @param {Client} client
+   * @param {ContextMenuInteraction} interaction
+   */
+  run: async (interaction, client) => {},
+}; 
