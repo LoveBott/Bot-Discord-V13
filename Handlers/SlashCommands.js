@@ -41,7 +41,8 @@ module.exports = async (client) => {
   console.log(Table.toString());
 
   client.on("ready", async () => {
-    const MailGuild = await client.guilds.cache.get("GUILD ID"); //Muy Pronto Si Tiene Apoyo Pongo hacerlo lo mismo pero global osea "await client.application.commands.set(CommandsArray)"
+    const MailGuild = await client.guilds.cache.get(process.env.GUILD_ID); //Muy Pronto Si Tiene Apoyo Pongo hacerlo lo mismo pero global osea "await client.application.commands.set(CommandsArray)"
+    //.env + process.env.GUILD_ID + GUILD_ID = ID_GUILD  | ejemplo: GUILD_ID=ID_GUILD :)!
 
     MailGuild.commands.set(CommandsArray).then(async (command) => {
       const Roles = (commandName) => {

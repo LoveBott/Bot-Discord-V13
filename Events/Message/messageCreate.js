@@ -1,5 +1,5 @@
 const { Client, Message, MessageEmbed, Collection } = require("discord.js");
-const { prefix } = require("../../config.json");
+const prefix = process.env.PREFIX; //.env + process.env.PREFIX + PREFIX = TU_PREFIX  | ejemplo: PREFIX=TU_PREFIX :)!
 
 module.exports = {
   name: "messageCreate",
@@ -7,7 +7,7 @@ module.exports = {
    * @param {Client} client
    * @param {Message} message
    */
-  run: async (message, client, Discord) => {
+  run: async (message, client) => {
     if (!message.content.startsWith(prefix) || message.author.bot) return;
 
     const args = message.content.slice(prefix.length).trim().split(/ +/g);
