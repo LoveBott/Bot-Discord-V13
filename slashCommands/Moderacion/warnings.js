@@ -155,7 +155,7 @@ module.exports = {
         async (err, data) => {
           if (err) throw err;
           if (data) {
-            const sugs = await interaction.followUp({
+            return interaction.followUp({
               embeds: [
                 new MessageEmbed()
                   .setAuthor("SISTEMA DE WARNS")
@@ -171,70 +171,6 @@ module.exports = {
                     ).join(" ")}`
                   ),
               ],
-              components: [
-                new MessageActionRow().addComponents(
-                  new MessageButton()
-                    .setLabel("Subir A SourceBin")
-                    .setCustomId("1")
-                    .setEmoji("🌐")
-                    .setStyle("SUCCESS")
-                ),
-              ],
-              fetchReply: true,
-            });
-
-            const collector = await sugs.createMessageComponentCollector({
-              componentType: "BUTTON",
-              time: 10000,
-            });
-
-            collector.on("collect", async (interaction) => {
-              if (interaction.customId === "1") {
-                sourcebin
-                  .create(
-                    [
-                      {
-                        content: `{
-                        informaction_user: {
-                          "user_username": "${user.user.username}",
-                          "user_tag": "${user.user.tag}",
-                          "user_id": "${user.user.id}",
-                          "user_discriminator": "#${user.user.discriminator}"
-                        },
-                        warns_informaction: {
-                          "${data.Content.map(
-                            (w, i) => `"ID": "${i + 1}"\n"Por": "${
-                              w.ExecuteTag
-                            }"\n"ID": "${w.ExecuterID}"\n"Fecha": "${
-                              w.Date
-                            }"\n"Razon": "${w.Reason}"\n"Evidencia": "${
-                              w.Evidence
-                            }"
-                \n`
-                          ).join(" ")}"
-                        }
-                      }`,
-                        language: "Json",
-                      },
-                    ],
-                    {
-                      title: `warns-list-of-${user.user.username}#${user.user.discriminator}`,
-                      description: `Warns De Un User En El Server ${interaction.guild.name} ID: ${interaction.guild.id}`,
-                    }
-                  )
-                  .then(async (value) => {
-                    const embed = new MessageEmbed()
-                      .setTitle("✅ Exitoso")
-                      .setDescription(
-                        `**Correctamente Tu Link De SourceBin Se Ha Subido Correctamente Aplasta El Button De Abajo Para Irte A Tu Link De SourceBin O Dale Click Aqui: [\`Click Aqui\`](${value.url})**`
-                      )
-                      .setColor("RANDOM");
-                    interaction.reply({
-                      embeds: [embed],
-                      ephemeral: true,
-                    });
-                  });
-              }
             });
           } else {
             interaction.followUp({
