@@ -37,13 +37,14 @@ PD: Muy Pronto Video De Esto OwO
 
 # ❗ Requisitos ❗
 
-* [Node.js 16.8.0](https://nodejs.org/en/download/current/)
-* [discord.js@13.1.0](https://www.npmjs.com/package/discord.js/v/13.1.0)
+* [Node.js v16.13.0](https://nodejs.org/dist/v16.13.0/node-v16.13.0-x64.msi)
+* [Node.js v17.1.0 (No Recomendable)](https://nodejs.org/en/download/current/) 
+* [discord.js@dev(13.4.0-dev.1637669018.2a0dedf)](https://www.npmjs.com/package/discord.js/v/13.4.0-dev.1637669018.2a0dedf)
 
 **O Darle Click Aqui [Here](https://github.com/LoveBott/Discord-Bot-V13#-descargar-las-cosas-necesarias) Para llevarte A Descargar Mas Rapido Node.Js o tambien visual studio code o si no puedes editar en Replit - Glitch - Heroku PD: Heroku es un host lo puedes editar tu proyecto con Visual Studio Code para eso necesita Git - Heroku App - Node.JS Y Para Descargar Esto Tres Dale Click Aqui [Here](https://github.com/LoveBott/Discord-Bot-V13#-descargar-las-cosas-necesarias)**
 # Instalación
 
-**Se requiere Node.JS v16.8.0 o más reciente**
+**Se requiere Node.JS v16.13.0 o más reciente**
 
 **Primero Es El Package que es este uwu:**
 
@@ -61,7 +62,7 @@ PD: Muy Pronto Video De Esto OwO
     "combined-stream": "^1.0.8",
     "delayed-stream": "^1.0.0",
     "discord-api-types": "^0.22.0",
-    "discord.js": "^13.1.0",
+    "discord.js": "^13.4.0-dev.1637669018.2a0dedf",
     "dot-prop": "^6.0.1",
     "fs": "^0.0.1-security",
     "is-obj": "^2.0.0",
