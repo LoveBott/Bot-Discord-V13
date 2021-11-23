@@ -118,15 +118,17 @@ const { token, prefix } = require('./config.json') //En Replit Debes Crear Un Se
 //mas Informacion: https://github.com/Lovebott/Bot-Discord-V13#env-en-replit
 
 function presence(){
-   client.user.setPresence({
-      status: "online",
-      game: {
-         name: "TEXTO", // Mensaje Para Poner en el Estado!
-         type: "PLAYING" // PLAYING, WATCHING, LISTENING, STREAMING Nota: Para El STREAMING Debes Poner Asi:
-         //type: "STREAMING",
-         //url: "twitch canal!" uwu!
-      }
-   });
+	client.user.setPresence({
+		status: "online",
+		activities: [
+			{
+				name: "TEXTO", // Mensaje Para Poner en el Estado!
+				type: "PLAYING", // PLAYING, WATCHING, LISTENING, STREAMING Nota: Para El STREAMING Debes Poner Asi:
+				//type: "STREAMING",
+				//url: "twitch canal!" uwu!
+			},
+		],
+	});
 }
 
 //    const array = [
